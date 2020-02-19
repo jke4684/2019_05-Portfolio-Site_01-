@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main_view.css">
+    <script type="text/javascript" src="js/chart_skill.js"></script>
+
+    <title>WooSung Site</title>
+</head>
+<style>
+.btn1-img,button{
+    border:none;
+    background-color: white;
+}
+</style>
+<body>
+    <div class="woo_header">
+        <div class="l_bar"></div>
+        <div class="m_bar">
+           
+            <div class="t_list">
+            <ul class="t_list_ul" >
+                <li class="t_list_li">
+                    <a href="#woo_body" style="color:rgb(255, 208, 0);">Home</a>
+                </li>
+                <li class="t_list_li">
+                    <a href="#About">About</a>
+                </li>
+                <li class="t_list_li">
+                    <a href="#Skills">Skills</a>
+                </li>
+                <li class="t_list_li">
+                    <a href="#Portfolio">Portfolio</a>
+                    </li>
+                
+                          
+
+            </ul>
+        </div>
+      
+        <div class="w_information"><a href="#"><img src='img/logo.png' width="100px" height="40px"/></a></div>
+</div>
+        <div class="r_bar"></div>
+    </div>
+    <div class="woo_body" id="woo_body">
+        <div class="main_image">
+        <h2 class="title_bar"></h2>
+        <h2 class="typing" style="display: none;" >안녕하세요:) 이우성님의 포트폴리오 사이트입니다.</h2>
+        <script>
+        var typingBool = false; 
+        var typingIdx=0; 
+        var typingTxt = $(".typing").text(); // 타이핑될 텍스트를 가져온다 
+        typingTxt=typingTxt.split(""); // 한글자씩 자른다. 
+        if(typingBool==false){ // 타이핑이 진행되지 않았다면 
+        typingBool=true; 
+        
+        var tyInt = setInterval(title_bar,100); // 반복동작 
+        } 
+        
+        function title_bar(){ 
+        if(typingIdx<typingTxt.length){ // 타이핑될 텍스트 길이만큼 반복 
+            $(".title_bar").append(typingTxt[typingIdx]); // 한글자씩 이어준다. 
+            typingIdx++; 
+        } else{ 
+            clearInterval(tyInt); //끝나면 반복종료 
+        } 
+     }
+     </script>
+    </div>
+        <div class="M_one_bar" id="About">
+            <h2><p class="main_one_font">About</p></h2>
+        </div> 
+        <div class="main_home">
+            <div class="main_home_img">
+                <img src="img/user_profile.png" class ="image_profile" width="380px" height="380px">
+            </div>
+            <div class="main_home_text">
+                    <img src="img/user_profile_text.png" width="380px" height="400px">
+            </div>
+        </div>
+        <div class="M_two_bar">
+            <h2><p class="main_two_font" id="Skills">Skills</p></h2>
+        </div> 
+        <div class="main_skills">
+                <div class="pie-chart pie-chart1"><span class="center">50%</span><br><br><br><br><br><br><b>JS/Jquery</b></div>
+                <div class="pie-chart pie-chart2"><span class="center">50%</span><br><br><br><br><br><br><b>JSP</b></div>        
+                <div class="pie-chart pie-chart3"><span class="center">50%</span><br><br><br><br><br><br><b>CSS</b></div>
+                <div class="pie-chart pie-chart4"><span class="center">50%</span><br><br><br><br><br><br><b>JAVA</b></div>
+                <div class="pie-chart pie-chart5"><span class="center">50%</span><br><br><br><br><br><br><b>C</b></div>
+                <div class="pie-chart pie-chart6"><span class="center">90%</span><br><br><br><br><br><br><b>OA</b></div>
+                
+                <script>
+                $(window).ready(function(){
+                    draw(50, '.pie-chart1', '#3232FF');
+                    draw(50, '.pie-chart2', '#66EC66');
+                    draw(50, '.pie-chart3','#FF91C8');
+                    draw(50, '.pie-chart4','#FFC31E');
+                    draw(50, '.pie-chart5','#FF6A6A');
+                    draw(90, '.pie-chart6','#BC50BC');
+                  });
+                    
+                </script>
+        </div>
+        <div class="M_one_bar" >
+            <h2><p class="main_one_font" id="Portfolio">Portfolio</p></h2>
+        </div> 
+        <div class="main_Portfolio">
+            <div class="m_Portfolio_list1">
+                    <div class="m_Portfolio_list11" >
+                        <div class="v_background"  a href="#modalLayer" id="modalLink"></div>
+                                <div id="modalLayer">
+                                        <div class="modalContent">
+                                          <button type="button"><img class="btn1-img" src="img/close.png" width="50px" height="50px"></button>
+                                          <div class="top_content">
+                                                <h1>Portfolio Site</h1>
+                                                <p style="text-align: left;"><br>참여도 : 100%<br>제작기간 : 2일 소요(48시간)<br>기능 : 메일 전송.<br><br>
+                                                    
+                                                    내용.
+                                                    
+                                                <br>취업 준비기간동안 포트폴리오 보여드리고자
+                                                제작하게 되었습니다.</p>
+
+                                          </div>
+                                          <div class="mide_content" >
+                                            <img src="img/portfolio_home.png" width="600px" height="100%">
+                                          </div>
+
+                                        </div> 
+                                      
+                           <script>
+                                $(document).ready(function(){
+                                var modalLayer = $("#modalLayer");
+                                var modalLink = $("#modalLink");
+                                var modalCont = $(".modalContent");
+                                var marginLeft = modalCont.outerWidth()/2;
+                                var marginTop = modalCont.outerHeight()/2; 
+                                
+                                modalLink.click(function(){
+                                    modalLayer.fadeIn("slow");
+                                    modalCont.css({"margin-top" : -marginTop, "margin-left" : -marginLeft});
+                                    $(this).blur();
+                                    $(".modalContent > a").focus(); 
+                                    return false;
+                                });
+                                
+                                $(".modalContent > button").click(function(){
+                                    modalLayer.fadeOut("slow");
+                                    modalLink.focus();
+                                    
+                                });        
+                                });
+                            
+                            </script>
+                    </div></div>
+                    <div class="m_Portfolio_list12">
+                                <div class="v_background"  a href="#modalLayer2" id="modalLink2"></div>
+                                <div id="modalLayer2">
+                                        <div class="modalContent2">
+                                                <button type="button"><img class="btn1-img" src="img/close.png" width="50px" height="50px"></button>
+                                          <div class="top_content">
+                                                <h1>CuKiYa</h1>
+                                                
+                                                <p style="text-align: left;"><br>참여도 : 50%<br>제작인원 : 5명.<br>제작기간 : 한달 소요<br>기능 : 악성코드 판별. 프로세스 로그 확인. 엘라스틱서치 웹페이지 분석 결과표.
+                                                    인프라 구축(UTM(방화벽), User, Mongo DB Server, cucusandBox), 악성프로그램 실행 TEST(CuCuSandBox)<br><br>
+                                                    
+                                                    내용.
+
+                                                <br>2018년 상반기, 다기능 악성코드 증가, 이메일 첨부파일 다운로드 시 해커가 내 PC 통제, 집값 폭등 이슈 악용한 악성파일 유포,
+                                                    페이스북에서 계정정보 탈취하는 악성코드. - 목적 : 감염 후 재 감염되지 않도록 막는 프로그램 개발 </p>
+                                          </div>
+                                          <div class="mide_content" >
+                                            <img src="img/cukiyaimg/a1.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a2.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a3.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a4.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a5.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a6.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a7.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a8.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a9.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a10.JPG" width="600px" height="100%">
+                                            <img src="img/cukiyaimg/a11.JPG" width="600px" height="100%">
+                                          </div>
+
+                                        </div> 
+                                        <script>
+                                                $(document).ready(function(){
+                                                var modalLayer = $("#modalLayer2");
+                                                var modalLink = $("#modalLink2");
+                                                var modalCont = $(".modalContent2");
+                                                var marginLeft = modalCont.outerWidth()/2;
+                                                var marginTop = modalCont.outerHeight()/2; 
+                                                
+                                                modalLink.click(function(){
+                                                    modalLayer.fadeIn("slow");
+                                                    modalCont.css({"margin-top" : -marginTop, "margin-left" : -marginLeft});
+                                                    $(this).blur();
+                                                    $(".modalContent2 > a").focus(); 
+                                                    return false;
+                                                });
+                                                
+                                                $(".modalContent2 > button").click(function(){
+                                                    modalLayer.fadeOut("slow");
+                                                    modalLink.focus();
+                                                });        
+                                                });
+                                            
+                                            </script>
+                            </div> </div>
+                    <div class="m_Portfolio_list13">
+                        
+                            <div class="v_background"  a href="#modalLayer3" id="modalLink3"></div>
+                            <div id="modalLayer3">
+                                    <div class="modalContent3">
+                                            <button type="button"><img class="btn1-img" src="img/close.png" width="50px" height="50px"></button>
+                                      <div class="top_content">
+                                            <h1>Smart Silver Walker</h1>
+                                            
+                                            <p style="text-align: left;"><br>참여도 : 40%<br>제작인원 : 4명.<br>제작기간 : 6달 소요<br>사용 부품 : 보행기, 아두이노 UNO R3 호환보드, 아두이노 프로미니 보드, xbee XB24-AWI-001,
+                                                지자기 센서 HMC5883L, DC 모터 , Xbee쉴드 및 xbee 레귤레이터 보드, 초음파센서 hc-sr04, 모터 드라이버 L298N, 리튬폴리머 전지 550mAh, 
+                                                5V.1A 리튬폴리머 배터리 충전기 모듈 TP4056  <br><br>
+                                                
+                                                내용.
+
+                                            <br>한 팀원의 할머님이 집안에서 보행기를 이용하시다가, 침대로 올라가실 때나 화장실 가실 때에 행동반경 범위에 걸리적거리지 않도록 보행기를 멀리두신다고 합니다. 
+                                            
+                                            이렇게 자신과 멀리 떨어진 곳에 보행기를 두었다가 다시 사용하시려고 보행기를 집으려 무리하실 때 위험이 있다고 합니다. 이를 기반으로 호출버튼을 누르면 보행기를 할머님
+                                        근처로 이동 시켜드리고자 노인을 위한 자동호출 보행기를 제작하게 되었습니다.</p>
+                                      </div>
+                                      <div class="mide_content" >
+                                            
+                                            <video oncontextmenu="return false;" id="myVideo" width="640" controls autoplay>
+                                                    <source src="video/smartsilverwack.mp4" type="video/mp4">
+                                                  </video>            
+                                      </div>
+
+                                    </div> 
+                                    <script>
+                                            $(document).ready(function(){
+                                            var modalLayer = $("#modalLayer3");
+                                            var modalLink = $("#modalLink3");
+                                            var modalCont = $(".modalContent3");
+                                            var marginLeft = modalCont.outerWidth()/2;
+                                            var marginTop = modalCont.outerHeight()/2; 
+                                            
+                                            modalLink.click(function(){
+                                                modalLayer.fadeIn("slow");
+                                                modalCont.css({"margin-top" : -marginTop, "margin-left" : -marginLeft});
+                                                $(this).blur();
+                                                $(".modalContent3 > a").focus(); 
+                                                return false;
+                                            });
+                                            
+                                            $(".modalContent3 > button").click(function(){
+                                                modalLayer.fadeOut("slow");
+                                                modalLink.focus();
+                                                myVideo.pause();
+                                            });        
+                                            });
+                                        
+                                        </script>
+                        </div> </div>
+            </div>
+            
+            <div class="m_Portfolio_list2">
+                    <div class="m_Portfolio_list21"></div>
+                    <div class="m_Portfolio_list22"></div>
+                    <div class="m_Portfolio_list23"></div>
+            </div>
+        </div>
+       <!-- 중고딕 15 -->
+        
+       
+        <div class="footer_bar">
+            <p><b>Copyrightⓒ2019. Web Back End Developer 이우성. All rights reserved.</b></p>
+            <p><b>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</b></p>
+
+
+    </div> 
+    
+    </div>
+</body>
+</html>
