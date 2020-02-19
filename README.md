@@ -1,2 +1,2 @@
-# saveStory
-job seeker // 
+# Story
+Web을 시작하기 위해 공부해온 과정들을 저장하고자 만들어보았습니다. // 
